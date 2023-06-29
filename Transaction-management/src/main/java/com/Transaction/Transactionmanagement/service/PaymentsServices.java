@@ -32,7 +32,7 @@ public class PaymentsServices {
 
     @Transactional
    public BookingAcknowledgement getBooking(BookingRequest bookingRequest) throws PassengerPaymentsException {
-
+        //As transactional is there hence only after successful execution tables will be comitted in db..
        PassengerInfo passengerInfo = bookingRequest.getPassengerInfo();
        passengerInfo =  passengerRepository.save(passengerInfo);
 
